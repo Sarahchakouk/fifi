@@ -1,86 +1,67 @@
-DETECTION OF PURCHASES IN LUXURY BRANDS TO PREVENT MONEY LAUNDERING
+##summary
+This project aims to develop an AI-powered platform to detect suspicious luxury brand purchases and prevent money laundering. The platform will utilize advanced algorithms and machine learning to analyze customer behavior, identifying patterns and anomalies that may indicate money laundering activities. When suspicious transactions are detected, the system will alert relevant authorities for further investigation.
 
-Final project for the Building AI course
-Summary
-
-Through intelligence I want to build The AI page is designed to detect purchases from luxury brands and prevent money laundering. The page uses advanced algorithms and machine learning to analyze customer behavior and identify any suspicious transactions. You can recognize patterns and anomalies that may indicate money laundering activity and alert relevant authorities for further investigation.
-
-The AI page is particularly useful for luxury brand retailers, as these businesses are often targeted by money launderers due to the high value of their products. By using the AI page, retailers can minimize the risk of being used as a conduit for money laundering, protect their brand reputation, and comply with legal requirements.
-
-The AI page is easy to use and can be customized to suit the needs of each individual retailer. It is designed to be easy to use and intuitive, with clear visualizations and alerts that make it easy to understand and act on the information provided. Plus, it's secure and confidential, ensuring customer data is protected and only accessible by authorized personnel.
-
-Overall, the AI luxury brand purchase detection page to prevent money laundering is an essential tool for any luxury brand retailer looking to protect their business and comply with legal regulations.
+Luxury brand retailers are often targeted by money launderers due to the high value of their products. By adopting this AI platform, retailers can reduce the risk of being exploited for money laundering, protect their brand reputation, and ensure compliance with legal requirements. The platform is designed to be user-friendly, with customizable features, clear visualizations, and secure handling of customer data.
 Background
 
-The frequency with which money laundering culprits are found varies depending on several factors, including the level of sophistication of the money laundering techniques used, the ability of investigators to track and detect suspicious transactions, and collaboration among authorities. local and international organizations in charge of combating money laundering.
+Money laundering is a significant issue that can undermine financial institutions, facilitate criminal activities, and damage the economy and social equity. Detection and prosecution of money launderers are complex and require coordination between local and international authorities. Implementing AI-based detection tools can enhance the effectiveness of identifying and preventing money laundering in the luxury brand sector.
+Impact of Money Laundering
 
-In general, the detection and prosecution of money launderers is a complex and challenging process that requires effective cooperation and coordination between local and international law enforcement agencies. While it is difficult to determine a specific frequency, the implementation of suspicious transaction detection tools, such as the AI page mentioned above, is expected to increase the effectiveness in identifying and preventing money laundering activities in the trademark sector. luxury.
+    Corruption of Financial Institutions: Introduction of illegal funds can weaken financial institutions' integrity, undermining confidence in the financial system.
+    Facilitation of Criminal Activities: Money laundering enables criminals to hide illegally obtained funds, facilitating crimes such as drug trafficking, human trafficking, corruption, and terrorist financing.
+    Economic and Social Inequity: Distorts markets and fair competition, allowing criminals to evade taxes, affecting government services and benefits for society.
 
-This is the list .... 1* Corruption and weakening of financial institutions: Money laundering can corrupt the financial system by introducing illegal funds into the system, which can weaken the integrity of financial institutions. This can undermine confidence in the financial system and erode its ability to function effectively and transparently.
+How it Works
 
-2* Facilitation of criminal activities: Money laundering allows criminals to hide the true nature and origin of illegally obtained funds, which can facilitate a wide range of criminal activities, such as drug trafficking, human trafficking, corruption and terrorist financing. Money laundering, therefore, contributes to the perpetuation of illegal activities and impunity for criminals.
+    Data Collection: Gather data on customer purchase patterns and transactions for various luxury brands.
+    Data Preprocessing: Clean and preprocess data to remove irrelevant information and convert it to a suitable format.
+    Feature Engineering: Select relevant features like purchase frequency, transaction amount, and time between purchases for the neural network.
+    Model Training: Train the neural network using supervised learning algorithms with examples of normal and suspicious purchasing patterns.
+    Model Evaluation: Test the model on a validation dataset, measuring performance using metrics such as accuracy, recall, and F1 score.
+    Model Implementation: Deploy the model in a real-world environment to detect suspicious purchases and potential money laundering activities.
 
-3* Damage to the economy and social equity: Money laundering can have a negative impact on the economy and social equity. It can distort markets and fair competition, as criminals can use laundered funds to invest in real estate, businesses, or other legitimate assets, which can affect a level playing field for legitimate businesses and make illegal activity more difficult to detect. Additionally, money laundering can contribute to social inequality by allowing criminals to evade taxes and evade their tax responsibilities, which can affect the government's ability to provide services and benefits to society as a whole.
-How is it used?
+Code Example
 
-Data Collection – The first step is to collect data on customer buying patterns and transactions for various luxury brands. The data should include information about the brand, the product, the amount of the transaction, and the customer's purchase history.
-
-Data preprocessing: The collected data must be preprocessed and cleaned to remove any irrelevant or redundant information. This step also involves converting the data to a format that can be processed by the neural network.
-
-Feature engineering – Feature engineering involves selecting the relevant features that will be used by the neural network to detect unusual purchase movements and money laundering. These characteristics could include the frequency of purchases, the total amount of the transaction, and the time between purchases.
-
-Model training: Once the data has been preprocessed and the relevant features selected, the neural network can be trained using supervised learning algorithms. Training data should include examples of normal and unusual purchasing patterns, as well as examples of money laundering activities.
-
-Model evaluation: After the model is trained, it must be evaluated to determine its accuracy and efficiency. This step involves testing the model on a validation dataset and measuring its performance using metrics such as accuracy, recall, and F1 score.
-
-Model Implementation: Once the model has been tested and found effective, it can be implemented in the real world environment to detect unusual purchase movements and money laundering activities in luxury brands. image
-
-This is how you create code examples:
+python
 
 import numpy as np
 from keras.models import Sequential
 from keras.layers import Dense
 
-# load the data and preprocess it
+# Load and preprocess the data
 X_train = np.load('X_train.npy')
 y_train = np.load('y_train.npy')
 X_test = np.load('X_test.npy')
 y_test = np.load('y_test.npy')
 
-# create the neural network model
-pattern = Sequential()
+# Create the neural network model
+model = Sequential()
 model.add(Dense(64, input_dim=X_train.shape[1], activation='relu'))
 model.add(Dense(32, activation='relu'))
 model.add(Dense(1, activation='sigmoid'))
 
-# compile the model
+# Compile the model
 model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
 
-# train the model
+# Train the model
 model.fit(X_train, y_train, epochs=50, batch_size=32, validation_data=(X_test, y_test))
 
-# evaluate the model
+# Evaluate the model
 loss, acc = model.evaluate(X_test, y_test, verbose=0)
 print('Test Accuracy: %.3f' % acc)
 
+Challenges
 
+    Data Access: Gaining access to transaction data from stores and banks, as well as customer data.
+    Ethical Considerations: Ensuring data privacy and compliance with legal regulations.
 
-## Challenges
+What's Next?
 
-What limitations and ethical considerations should be taken into account when implementing a solution like this?
+To advance this project, the following steps are necessary:
 
-The limitations may be: having access to the transactions of stores and banks, as well as customer data.
+    Skills: Expertise in AI, machine learning, data analytics, and cybersecurity.
+    Collaboration: Partnering with luxury brands, financial institutions, and regulatory bodies.
+    Research Society: Creating a research community to collaborate and develop this project further.
 
-## Whats Next?
-
-What kind of skills, what kind of help would you need to keep going?
-
-I would create a research society, affiliate different business partners to carry out this project.
-
-
-
-
-## Thanks
-
+Thank you,
 University of Helsinki
-# fifi
