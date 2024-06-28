@@ -1,26 +1,31 @@
-##summary
-This project aims to develop an AI-powered platform to detect suspicious luxury brand purchases and prevent money laundering. The platform will utilize advanced algorithms and machine learning to analyze customer behavior, identifying patterns and anomalies that may indicate money laundering activities. When suspicious transactions are detected, the system will alert relevant authorities for further investigation.
+# Project Title
 
-Luxury brand retailers are often targeted by money launderers due to the high value of their products. By adopting this AI platform, retailers can reduce the risk of being exploited for money laundering, protect their brand reputation, and ensure compliance with legal requirements. The platform is designed to be user-friendly, with customizable features, clear visualizations, and secure handling of customer data.
+project for the Building AI course
+# Summary
+
+This project aims to develop an AI-powered platform to detect suspicious luxury brand purchases and prevent money laundering. The system will analyze customer behavior and identify patterns that indicate money laundering, alerting authorities for further investigation.
 Background
 
-Money laundering is a significant issue that can undermine financial institutions, facilitate criminal activities, and damage the economy and social equity. Detection and prosecution of money launderers are complex and require coordination between local and international authorities. Implementing AI-based detection tools can enhance the effectiveness of identifying and preventing money laundering in the luxury brand sector.
-Impact of Money Laundering
+Money laundering is a significant problem that undermines financial institutions, facilitates criminal activities, and damages the economy. Luxury brand retailers are often targeted due to the high value of their products. This project aims to mitigate these risks by providing a tool that detects suspicious transactions, helping retailers comply with legal requirements and protect their reputation.
 
-    Corruption of Financial Institutions: Introduction of illegal funds can weaken financial institutions' integrity, undermining confidence in the financial system.
-    Facilitation of Criminal Activities: Money laundering enables criminals to hide illegally obtained funds, facilitating crimes such as drug trafficking, human trafficking, corruption, and terrorist financing.
-    Economic and Social Inequity: Distorts markets and fair competition, allowing criminals to evade taxes, affecting government services and benefits for society.
+    Corruption of financial institutions
+    Facilitation of criminal activities
+    Economic and social inequity
 
-How it Works
+How is it used?
 
-    Data Collection: Gather data on customer purchase patterns and transactions for various luxury brands.
-    Data Preprocessing: Clean and preprocess data to remove irrelevant information and convert it to a suitable format.
-    Feature Engineering: Select relevant features like purchase frequency, transaction amount, and time between purchases for the neural network.
-    Model Training: Train the neural network using supervised learning algorithms with examples of normal and suspicious purchasing patterns.
-    Model Evaluation: Test the model on a validation dataset, measuring performance using metrics such as accuracy, recall, and F1 score.
-    Model Implementation: Deploy the model in a real-world environment to detect suspicious purchases and potential money laundering activities.
+The AI platform is used by luxury brand retailers to monitor customer transactions for suspicious activities. The process involves:
 
-Code Example
+    Data Collection: Gathering data on customer purchase patterns and transactions.
+    Data Preprocessing: Cleaning and preparing the data for analysis.
+    Feature Engineering: Selecting relevant features for the neural network.
+    Model Training: Training the neural network to detect unusual purchase patterns.
+    Model Evaluation: Testing the model's accuracy and efficiency.
+    Model Implementation: Deploying the model to detect suspicious transactions in real-time.
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Sleeping_cat_on_her_back.jpg" width="300">
+
+This is how you create code examples:
 
 python
 
@@ -50,18 +55,22 @@ model.fit(X_train, y_train, epochs=50, batch_size=32, validation_data=(X_test, y
 loss, acc = model.evaluate(X_test, y_test, verbose=0)
 print('Test Accuracy: %.3f' % acc)
 
+Data sources and AI methods
+
+The data comes from customer transactions provided by luxury brand retailers. The platform uses machine learning algorithms and neural networks to analyze the data and detect suspicious patterns.
+
+Twitter API
+Syntax	Description
+Header	Title
+Paragraph	Text
 Challenges
 
-    Data Access: Gaining access to transaction data from stores and banks, as well as customer data.
-    Ethical Considerations: Ensuring data privacy and compliance with legal regulations.
+The project does not solve all aspects of money laundering and has limitations such as access to transaction data from stores and banks. Ethical considerations include ensuring data privacy and compliance with legal regulations.
+What next?
 
-What's Next?
+To advance the project, further skills in AI, machine learning, data analytics, and cybersecurity are needed. Collaboration with luxury brands, financial institutions, and regulatory bodies is essential for success.
+Acknowledgments
 
-To advance this project, the following steps are necessary:
-
-    Skills: Expertise in AI, machine learning, data analytics, and cybersecurity.
-    Collaboration: Partnering with luxury brands, financial institutions, and regulatory bodies.
-    Research Society: Creating a research community to collaborate and develop this project further.
-
-Thank you,
-University of Helsinki
+    Inspired by the University of Helsinki's Building AI course
+    Special thanks to open-source contributors and the AI research community
+    Sleeping Cat on Her Back by Umberto Salvagnin / CC BY 2.0
