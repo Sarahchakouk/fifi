@@ -1,6 +1,4 @@
-# Project Title
-
-project for the Building AI course
+# platform that detects suspicious luxury brand purchases
 # Summary
 
 This project aims to develop an AI-powered platform to detect suspicious luxury brand purchases and prevent money laundering. The system will analyze customer behavior and identify patterns that indicate money laundering, alerting authorities for further investigation.
